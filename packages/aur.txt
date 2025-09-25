@@ -1,0 +1,5 @@
+ttf-jetbrains-mono-nerd
+swww
+fastfetch
+any_other_aur_package
+

@@ -1,0 +1,13 @@
+neovim
+tmux
+alacritty
+walker
+waybar
+swaybg
+hyprland
+git
+zsh
+pipewire
+wireplumber
+xdg-desktop-portal-hyprland
+

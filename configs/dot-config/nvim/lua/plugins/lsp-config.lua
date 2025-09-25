@@ -1,0 +1,27 @@
+return {
+	{
+		"williamboman/mason.nvim",
+		dependencies = {
+			"williamboman/mason-lspconfig.nvim",
+		},
+		lazy = false,
+		config = function()
+			require("mason").setup()
+			require("mason-lspconfig").setup({
+				auto_install = true,
+				ensure_installed = { "lua_ls" },
+			})
+		end,
+	},
+	{
+		"neovim/nvim-lspconfig",
+		lazy = false,
+		config = function()
+			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
+			vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
+			vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, {})
+			vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
+			vim.keymap.set("n", "<leader>rr", vim.lsp.buf.rename, {})
+		end,
+	},
+}
